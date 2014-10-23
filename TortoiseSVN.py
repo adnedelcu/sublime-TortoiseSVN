@@ -85,6 +85,11 @@ class SvnSwitchCommand(TortoiseSvnCommand):
 		TortoiseSvnCommand.run(self, 'switch', paths)
 
 
+class SvnBranchCommand(TortoiseSvnCommand):
+	def run(self, paths=None):
+		TortoiseSvnCommand.run(self, 'copy', paths)
+
+
 class SvnDiffCommand(TortoiseSvnCommand):
 	def run(self, paths=None):
 		TortoiseSvnCommand.run(self, 'diff', paths)
